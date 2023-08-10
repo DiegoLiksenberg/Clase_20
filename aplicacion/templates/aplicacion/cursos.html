@@ -8,7 +8,9 @@
 
 
 {% block contenido %}
-    <h1>Cursos</h1>
+    <h1>{{ titulo|upper }} - {% now "d / m/ Y" %}</h1>
+
+    <h4>Cantidad de Cursos en la tabla {{ cursos|length }}</h4>
 
     <table class="table table-striped">
         <thead>
@@ -32,6 +34,10 @@
         </tbody>
     </table>   
 
+   
+   
+   
+   {% comment %} <h4>Comisiones  {{comisiones.0 }}, {{comisiones.1 }} </h4> {% endcomment %}
 {% endblock contenido %}
     
     
